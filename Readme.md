@@ -14,9 +14,9 @@ functions. It supports:
 
 ## TEAM MEMBERS
 
-* Moaz — 900231984
-* Kareem — 900231111
-* Zyad — 900231111
+* Moaz Allam         —  900231984
+* Karim El Henawy    —  900231975
+* Zyad Maher         —  900232155
 
 ## FILE STRUCTURE (relevant parts)
 
@@ -97,8 +97,9 @@ python .\testing\test_fuzzing.py
   * Verifies results with truth-table check / reference evaluator
   * Detects crashes, inconsistent outputs, and edge-case
 
-### Limitation:
- * Very large functions (15+ variables with many minterms) may take 
+LIMITATIONS
+================================================================================
+- Very large functions (15+ variables with many minterms) may take 
   significant processing time
- * Maximum search depth limited to prevent infinite loops in complex cases
- * Console output only (no GUI)
+- Maximum search depth limited to prevent infinite loops in complex cases
+- Console output only (no GUI)
