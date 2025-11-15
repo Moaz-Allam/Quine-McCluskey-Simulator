@@ -414,7 +414,7 @@ def parse_testcase_input(input_str):
 def process_testcase(testcase_num):
     """Process a single test case."""
     filename = f"./complex_test_cases/test{testcase_num}.txt"
-    # filename = f"./test_cases/test{testcase_num}.txt"
+    # filename = f"./simple_test_cases/test{testcase_num}.txt" # If you want to run the simple test cases
     
     # Parse input
     num_vars, minterms, dont_cares = parse_input_file(filename)

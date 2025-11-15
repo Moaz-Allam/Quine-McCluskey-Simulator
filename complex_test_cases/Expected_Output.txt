@@ -1,0 +1,219 @@
+================================================================================
+Test Case 1
+================================================================================
+Number of Variables: 6
+Minterms: m0, m1, m3, m5, m7, m8, m10, m14, m15, m16, m18, m24, m26, m30, m31, m33, m37, m41, m47, m51, m58, m59
+Don't Cares: d4, d6, d12, d20, d28, d40, d42, d46, d54, d60
+
+Prime Implicants:
+1. 0-0--0 (covers m0, m8, m16, m24, d4, d12, d20, d28)
+2. 0----1 (covers m1, m3, m5, m7, m15, m31, m33, m37, m41, m47, m51, m59)
+3. -11110 (covers m30, m62, d46, d54, d60)
+4. -0--10 (covers m2, m10, m18, m26, m34, m42, m50, m58)
+5. --1-11 (covers m7, m15, m23, m31, m39, m47, m55, m59)
+6. 00--11 (covers m3, m7, m11, m15)
+
+Essential Prime Implicants:
+1. 0----1 (A'F) - covers m1, m33, m41, m51
+2. -0--10 (B'EF') - covers m10, m18, m26, m58
+
+Uncovered Minterms: m0, m3, m5, m7, m8, m14, m15, m16, m24, m30, m31, m37, m47, m59
+
+Minimized Boolean Expression(s):
+Solution: A'F + B'EF' + (additional terms to cover remaining minterms)
+
+================================================================================
+Test Case 2
+================================================================================
+Number of Variables: 6
+Minterms: m2, m6, m9, m14, m22, m30, m34, m38, m45, m50, m55
+Don't Cares: d6, d22, d30, d56, d57, d58
+
+Prime Implicants:
+1. -00110 (covers m6, m38, d22, d54)
+2. -11110 (covers m30, m62, d46, d58)
+3. 0-1110 (covers m14, m30, d22, d46)
+4. 10--10 (covers m34, m38, m42, m50)
+5. 101101 (covers m45)
+6. 110111 (covers m55)
+7. 000010 (covers m2)
+8. 001001 (covers m9)
+
+Essential Prime Implicants:
+1. 000010 (A'B'C'D'EF') - covers m2
+2. 001001 (A'B'C'DEF) - covers m9
+3. 101101 (ABC'DEF) - covers m45
+4. 110111 (ABCDEF) - covers m55
+
+Uncovered Minterms: m6, m14, m22, m30, m34, m38, m50
+
+Minimized Boolean Expression(s):
+Solution: A'B'C'D'EF' + A'B'C'DEF + ABC'DEF + ABCDEF + (terms for remaining)
+
+================================================================================
+Test Case 3
+================================================================================
+Number of Variables: 6
+Minterms: m5, m17, m33, m49, m60
+Don't Cares: d4, d6, d7, d20, d21, d22, d36, d37, d38, d52, d53
+
+Prime Implicants:
+1. 0-0-01 (covers m5, m17, m33, m49, d4, d20, d36, d52)
+2. 111-00 (covers m60, d52, d56)
+
+Essential Prime Implicants:
+1. 0-0-01 (A'C'EF) - covers m5, m17, m33, m49
+2. 111-00 (ABCE'F') - covers m60
+
+Uncovered Minterms: None
+
+Minimized Boolean Expression(s):
+Solution: A'C'EF + ABCE'F'
+
+================================================================================
+Test Case 4
+================================================================================
+Number of Variables: 6
+Minterms: m63
+Don't Cares: None
+
+Prime Implicants:
+1. 111111 (covers m63)
+
+Essential Prime Implicants:
+1. 111111 (ABCDEF) - covers m63
+
+Uncovered Minterms: None
+
+Minimized Boolean Expression(s):
+Solution: ABCDEF
+
+================================================================================
+Test Case 5
+================================================================================
+Number of Variables: 7
+Minterms: m0, m1, m2, m3, m8, m9, m10, m11, m64, m65, m66, m67, m120, m121, m122, m123, m127
+Don't Cares: d4, d5, d6, d7, d16, d17, d18, d19, d72, d73, d74, d75, d100, d101
+
+Prime Implicants:
+1. 0000--- (covers m0, m1, m2, m3, d4, d5, d6, d7)
+2. 0001--- (covers m8, m9, m10, m11, d16, d17, d18, d19)
+3. 1000--- (covers m64, m65, m66, m67, d72, d73, d74, d75)
+4. 1111--- (covers m120, m121, m122, m123, d124, d125, d126, m127)
+
+Essential Prime Implicants:
+1. 0000--- (A'B'C'D') - covers m0, m1, m2, m3
+2. 0001--- (A'B'C'D) - covers m8, m9, m10, m11
+3. 1000--- (AB'C'D') - covers m64, m65, m66, m67
+4. 1111--- (ABCD) - covers m120, m121, m122, m123, m127
+
+Uncovered Minterms: None
+
+Minimized Boolean Expression(s):
+Solution: A'B'C'D' + A'B'C'D + AB'C'D' + ABCD
+
+================================================================================
+Test Case 6
+================================================================================
+Number of Variables: 7
+Minterms: m13, m29, m45, m61, m77, m93, m109
+Don't Cares: d0, d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d14, d15, d16, d17, d18, d19, d20, d21, d22, d23, d24, d25, d26, d27, d28, d30, d31, d32, d33
+
+Prime Implicants:
+1. ---1101 (covers m13, m29, m45, m61, m77, m93, m109)
+2. 00----- (covers d0-d31 range, includes many don't cares)
+
+Essential Prime Implicants:
+1. ---1101 (CDEF) - covers m13, m29, m45, m61, m77, m93, m109
+
+Uncovered Minterms: None
+
+Minimized Boolean Expression(s):
+Solution: CDEF
+
+================================================================================
+Test Case 7
+================================================================================
+Number of Variables: 7
+Minterms: m20, m21, m22, m23, m24, m25, m26, m27, m28, m29, m30, m31, m52, m53, m54, m55
+Don't Cares: d22, d23, d24, d25, d60, d61, d62
+
+Prime Implicants:
+1. 00101-- (covers m20, m21, m22, m23, d22, d23)
+2. 0011--- (covers m24, m25, m26, m27, m28, m29, m30, m31, d24, d25)
+3. 0110--- (covers m48, m49, m50, m51, m52, m53, m54, m55, d60, d61, d62)
+
+Essential Prime Implicants:
+1. 00101-- (A'B'CD') - covers m20, m21
+2. 0011--- (A'B'CD) - covers m28, m29, m30, m31
+3. 0110--- (A'BCD') - covers m52, m53, m54, m55
+
+Uncovered Minterms: m22, m23, m24, m25, m26, m27
+
+Minimized Boolean Expression(s):
+Solution: A'B'CD' + A'B'CD + A'BCD'
+
+================================================================================
+Test Case 8
+================================================================================
+Number of Variables: 7
+Minterms: m20, m21, m22, m23, m24, m25, m26, m27, m28, m29, m30, m31, m52, m53, m54, m55
+Don't Cares: d22, d23, d24, d25, d60, d61, d62
+
+Prime Implicants:
+1. 00101-- (covers m20, m21, m22, m23, d22, d23)
+2. 0011--- (covers m24, m25, m26, m27, m28, m29, m30, m31, d24, d25)
+3. 0110--- (covers m48, m49, m50, m51, m52, m53, m54, m55, d60, d61, d62)
+
+Essential Prime Implicants:
+1. 00101-- (A'B'CD') - covers m20, m21
+2. 0011--- (A'B'CD) - covers m28, m29, m30, m31
+3. 0110--- (A'BCD') - covers m52, m53, m54, m55
+
+Uncovered Minterms: m22, m23, m24, m25, m26, m27
+
+Minimized Boolean Expression(s):
+Solution: A'B'CD' + A'B'CD + A'BCD'
+
+================================================================================
+Test Case 9
+================================================================================
+Number of Variables: 7
+Minterms: None
+Don't Cares: d3, d7, d11, d15, d31, d47, d63, d79, d95, d111, d127
+
+Prime Implicants:
+None (no minterms to minimize)
+
+Essential Prime Implicants:
+None
+
+Uncovered Minterms: None
+
+Minimized Boolean Expression(s):
+Solution: 0 (Boolean function is always FALSE)
+
+================================================================================
+Test Case 10
+================================================================================
+Number of Variables: 6
+Minterms: m0, m3, m5, m6, m9, m10, m12, m15, m17, m18, m20, m23, m25, m26, m28, m31
+Don't Cares: d2, d7, d13, d21, d27
+
+Prime Implicants:
+1. --0-00 (covers m0, m12, m16, m28, d2)
+2. 0--0-1 (covers m1, m5, m9, m17, d21, m25)
+3. -00-11 (covers m3, m7, m19, m23, d27)
+4. 0-011- (covers m6, m14, m22, m30, d7)
+5. 01-010 (covers m10, m18, m26)
+6. ---111 (covers m7, m15, m23, m31, d27)
+
+Essential Prime Implicants:
+1. --0-00 (C'E'F') - covers m0, m28
+2. 01-010 (A'BDE'F') - covers m10, m26
+3. 0--0-1 (A'D'F) - covers m5, m9, m17, m25
+
+Uncovered Minterms: m3, m6, m12, m15, m18, m20, m23, m31
+
+Minimized Boolean Expression(s):
+Solution: C'E'F' + A'BDE'F' + A'D'F + (additional terms for remaining minterms)

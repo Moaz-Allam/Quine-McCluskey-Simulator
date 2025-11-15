@@ -1,0 +1,199 @@
+================================================================================
+Test 1
+================================================================================
+Number of Variables: 3
+Minterms: m0, m1, m2, m5, m7
+Don't Cares: None
+
+Prime Implicants:
+1. 00- (covers m0, m1) - Binary: 00-
+2. 0-0 (covers m0, m2) - Binary: 0-0
+3. -01 (covers m1, m5) - Binary: -01
+4. 1-1 (covers m5, m7) - Binary: 1-1
+
+Essential Prime Implicants:
+1. 0-0 (A'C') - covers m2
+2. 1-1 (AC) - covers m7
+
+Uncovered Minterms: m1, m5
+
+Minimized Boolean Expression(s):
+Solution 1: A'C' + AC + A'B'
+Solution 2: A'C' + AC + B'C
+
+================================================================================
+Test 2
+================================================================================
+Number of Variables: 4
+Minterms: m0, m2, m5, m7, m8, m10, m13, m15
+Don't Cares: d1, d3, d9, d11
+
+Prime Implicants:
+1. 0-0- (covers m0, m2, m8, m10, d1, d9) - Binary: 0-0-
+2. -101 (covers m5, m13, d9) - Binary: -101
+3. -111 (covers m7, m15, d11) - Binary: -111
+
+Essential Prime Implicants:
+1. 0-0- (A'C') - covers m0, m2, m8, m10
+
+Uncovered Minterms: m5, m7, m13, m15
+
+Minimized Boolean Expression(s):
+Solution: A'C' + BD + CD
+
+================================================================================
+Test 3
+================================================================================
+Number of Variables: 2
+Minterms: m0, m1, m3
+Don't Cares: None
+
+Prime Implicants:
+1. 0- (covers m0, m1) - Binary: 0-
+2. -1 (covers m1, m3) - Binary: -1
+
+Essential Prime Implicants:
+1. 0- (A') - covers m0
+2. -1 (B) - covers m3
+
+Uncovered Minterms: None (m1 covered by both EPIs)
+
+Minimized Boolean Expression(s):
+Solution: A' + B
+
+================================================================================
+Test 4
+================================================================================
+ERROR: Invalid input - Number of variables not specified
+
+================================================================================
+Test 5
+================================================================================
+Number of Variables: 3
+Maxterms: M0, M2, M4, M6
+Don't Cares: None
+
+Converting to Product of Sums (POS):
+Maxterms in binary:
+M0: 000, M2: 010, M4: 100, M6: 110
+
+Prime Implicants (for POS):
+1. 0-0 (covers M0, M2) - Binary: 0-0
+2. -00 (covers M0, M4) - Binary: -00
+3. -10 (covers M2, M6) - Binary: -10
+4. 1-0 (covers M4, M6) - Binary: 1-0
+
+Essential Prime Implicants:
+All maxterms require coverage
+
+Minimized Boolean Expression (POS):
+Solution: (A + C)(B + C)
+
+================================================================================
+Test 6
+================================================================================
+Number of Variables: 4
+Minterms: m0, m1, m4, m5, m6, m7, m8, m9, m12, m13
+Don't Cares: d2, d10, d14
+
+Prime Implicants:
+1. 0--0 (covers m0, m4, m8, m12, d2, d10) - Binary: 0--0
+2. 0--1 (covers m1, m5, m9, m13) - Binary: 0--1
+3. 01-- (covers m4, m5, m6, m7, d2) - Binary: 01--
+4. 110- (covers m12, m13, d14) - Binary: 110-
+
+Essential Prime Implicants:
+1. 0--1 (A'D) - covers m1, m5, m9, m13
+2. 01-- (A'B) - covers m6, m7
+
+Uncovered Minterms: m0, m4, m8, m12
+
+Minimized Boolean Expression(s):
+Solution: A'D + A'B + A'C'
+
+================================================================================
+Test 7
+================================================================================
+Number of Variables: 5
+Minterms: m0, m1, m2, m3, m8, m9, m10, m11, m16, m17, m18, m19, m24, m25, m26, m27
+Don't Cares: None
+
+Prime Implicants:
+1. 000-- (covers m0, m1, m2, m3) - Binary: 000--
+2. 010-- (covers m8, m9, m10, m11) - Binary: 010--
+3. 100-- (covers m16, m17, m18, m19) - Binary: 100--
+4. 110-- (covers m24, m25, m26, m27) - Binary: 110--
+
+Essential Prime Implicants:
+1. 000-- (A'B'C') - covers m0, m1, m2, m3
+2. 010-- (A'BC') - covers m8, m9, m10, m11
+3. 100-- (AB'C') - covers m16, m17, m18, m19
+4. 110-- (ABC') - covers m24, m25, m26, m27
+
+Uncovered Minterms: None
+
+Minimized Boolean Expression(s):
+Solution: A'B'C' + A'BC' + AB'C' + ABC' = C'(A'B' + A'B + AB' + AB) = C'
+
+================================================================================
+Test 8
+================================================================================
+Number of Variables: 3
+Minterms: m0, m1, m2, m3, m4, m5, m6
+Don't Cares: None
+
+Prime Implicants:
+1. 0-- (covers m0, m1, m2, m3) - Binary: 0--
+2. -0- (covers m0, m2, m4, m6) - Binary: -0-
+3. 10- (covers m4, m5) - Binary: 10-
+
+Essential Prime Implicants:
+1. 0-- (A') - covers m1, m3
+2. 10- (AB') - covers m5
+
+Uncovered Minterms: m0, m2, m4, m6
+
+Minimized Boolean Expression(s):
+Solution: A' + B' + C'
+
+================================================================================
+Test 9
+================================================================================
+Number of Variables: 4
+Minterms: m4, m5, m6, m7, m12, m13, m14, m15
+Don't Cares: d0, d1, d8, d9
+
+Prime Implicants:
+1. 01-- (covers m4, m5, m6, m7) - Binary: 01--
+2. 11-- (covers m12, m13, m14, m15) - Binary: 11--
+3. -1-- (covers m4, m5, m6, m7, m12, m13, m14, m15) - Binary: -1--
+
+Essential Prime Implicants:
+1. -1-- (B) - covers all minterms
+
+Uncovered Minterms: None
+
+Minimized Boolean Expression(s):
+Solution: B
+
+================================================================================
+Test 10
+================================================================================
+Number of Variables: 4
+Minterms: m0, m1, m2, m3, m4, m5, m6, m7, m11, m15
+Don't Cares: d8, d9
+
+Prime Implicants:
+1. 00-- (covers m0, m1, m2, m3) - Binary: 00--
+2. 01-- (covers m4, m5, m6, m7, d8, d9) - Binary: 01--
+3. -011 (covers m3, m11) - Binary: -011
+4. -111 (covers m7, m15) - Binary: -111
+
+Essential Prime Implicants:
+1. 00-- (A'B') - covers m0, m1, m2
+2. 01-- (A'B) - covers m4, m5, m6
+
+Uncovered Minterms: m3, m7, m11, m15
+
+Minimized Boolean Expression(s):
+Solution: A'B' + A'B + CD
