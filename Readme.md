@@ -12,6 +12,9 @@ functions. It supports:
 * Finding minimal Boolean expressions
 * Verilog HDL generation
 
+## PROJECT GITHUB REPO LINK
+https://github.com/Moaz-Allam/Quine-McCluskey-Simulator.git
+
 ## TEAM MEMBERS
 
 * Moaz Allam         —  900231984
